@@ -3,7 +3,7 @@ import BaseButton from "~/components/ui/BaseButton.vue";
 </script>
 
 <template>
-<section id="contact" class="bg-gray-50 lg:min-h-56">
+<section id="contact" class="bg-gray-100 lg:min-h-56">
   <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
     <h1 class="text-center text-4xl md:text-5xl font-bold text-black">How to Reach Me</h1>
     <div class="mt-10 lg:mt-16">

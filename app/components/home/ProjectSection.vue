@@ -118,7 +118,7 @@ const selectedProjectData = computed(() => {
 </script>
 
 <template>
-  <section id="project" class="bg-gray-100 lg:min-h-56">
+  <section id="project" class="bg-gray-50 lg:min-h-56">
     <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
 
       <h1 class="mb-16 text-center text-4xl md:text-5xl font-bold text-black">What I Build</h1>
