@@ -30,7 +30,7 @@ const technologies = ref([
 </script>
 
 <template>
-  <section id="tech-stack" class="bg-gray-100 lg:min-h-56">
+  <section id="stack" class="bg-gray-100 lg:min-h-56">
     <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 flex flex-col gap-16">
       <h1 class="text-center text-4xl md:text-5xl font-bold text-black">What Tech I Use</h1>
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
