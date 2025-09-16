@@ -6,7 +6,6 @@ const isOpen = ref(false);
 const menuItems = ref([
   { name: 'Home', href: '#home' },
   { name: 'Stack', href: '#stack' },
-  { name: 'About', href: '#about' },
   { name: 'Project', href: '#project' },
   { name: 'Contact', href: '#contact' },
   { name: 'CV', href: '/Muhammad-Fikri-CV-Backend-Engineering.pdf' },
