@@ -14,7 +14,8 @@ export default defineNuxtConfig({
         head: {
             title: "Muhammad Fikri || 2025",
             link: [
-                { rel: 'icon', href: '/favicon.png' },
+                { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+                { rel: 'icon', type: 'image/png', href: '/favicon.png' },
                 { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
                 { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
                 {
