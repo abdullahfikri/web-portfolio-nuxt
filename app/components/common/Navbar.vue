@@ -7,7 +7,6 @@ const menuItems = ref([
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
   { name: 'ProjectSection', href: '#project' },
-  { name: 'Testimony', href: '#testimony' },
   { name: 'Contact', href: '#contact' },
 
 ])
