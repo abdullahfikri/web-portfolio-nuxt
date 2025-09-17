@@ -7,6 +7,20 @@ export default defineNuxtConfig({
         '@nuxtjs/tailwindcss',
         '@nuxt/content'
     ],
+    content: {
+        build: {
+            markdown: {
+                highlight: {
+                    theme: 'material-theme',
+                    langs: [
+                        'c',
+                        'java',
+                        'sql',
+                    ]
+                }
+            }
+        }
+    },
     app: {
         head: {
             title: "Muhammad Fikri || 2025",
