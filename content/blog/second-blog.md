@@ -1,5 +1,5 @@
 ---
-title: 'My First Nuxt Content Blog Post'
+title: 'My Second Nuxt Content Blog Post'
 subtitle: 'Exploring the power of schemas and content.'
 description: 'This is my first post using Nuxt Content. I am exploring how to use frontmatter that is validated by a Zod schema.'
 publishDate: '2025-09-17'
