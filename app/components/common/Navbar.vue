@@ -4,11 +4,11 @@ import {ref} from "vue";
 const isOpen = ref(false);
 
 const menuItems = ref([
-  { name: 'Home', href: '#home' },
-  { name: 'Stack', href: '#stack' },
-  { name: 'About', href: '#about' },
-  { name: 'Project', href: '#project' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Home', href: '/#home' },
+  { name: 'Stack', href: '/#stack' },
+  { name: 'Project', href: '/#project' },
+  { name: 'Contact', href: '/#contact' },
+  { name: 'Blog', href: '/blog'},
   { name: 'CV', href: '/Muhammad-Fikri-CV-Backend-Engineering.pdf' },
 ])
 
@@ -38,11 +38,20 @@ const socialLinks = ref([
         <!-- Left Side: Contains Desktop Menu. Empty on mobile but necessary for justify-between. -->
         <div class="flex items-center">
           <div class="hidden md:flex items-baseline space-x-4">
-            <a v-for="item in menuItems" :key="item.name" :href="item.href"
-               class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-200 transition-colors duration-300"
-            >
-              {{ item.name }}
-            </a>
+            <template v-for="item in menuItems" :key="item.name">
+              <a v-if="item.name === 'CV'"
+                 :href="item.href"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-200 transition-colors duration-300">
+                {{ item.name }}
+              </a>
+              <NuxtLink v-else
+                        :to="item.href"
+                        class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-200 transition-colors duration-300">
+                {{ item.name }}
+              </NuxtLink>
+            </template>
           </div>
         </div>
 
@@ -50,12 +59,12 @@ const socialLinks = ref([
         <div class="flex items-center">
           <!-- Social Icons (Desktop) -->
           <div class="hidden md:flex items-center space-x-4">
-            <a v-for="link in socialLinks" :key="link.name" :href="link.href" :target="link.name === 'CV' ? '_self' : '_blank'" rel="noopener noreferrer"
+            <NuxtLink v-for="link in socialLinks" :key="link.name" :to="link.href" :target="link.name === 'CV' ? '_self' : '_blank'" rel="noopener noreferrer"
                :aria-label="link.name"
                class="text-gray-600 hover:text-cyan-500 transition-colors duration-300">
               <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
                    v-html="link.icon"></svg>
-            </a>
+            </NuxtLink>
           </div>
 
           <!-- Mobile menu button -->
@@ -79,19 +88,29 @@ const socialLinks = ref([
     <transition name="fade">
       <div v-if="isOpen" class="md:hidden bg-gray-100 border-t border-gray-200" @click.self="isOpen = false">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <a v-for="item in menuItems" :key="item.name" :href="item.href" @click="isOpen = false"
-             class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-200 transition-colors duration-300">
-            {{ item.name }}
-          </a>
+          <template v-for="item in menuItems" :key="item.name">
+            <a v-if="item.name === 'CV'"
+               :href="item.href"
+               target="_blank"
+               rel="noopener noreferrer"
+               @click="isOpen = false"
+               class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-200 transition-colors duration-300">
+              {{ item.name }}
+            </a>
+            <NuxtLink v-else :to="item.href" @click="isOpen = false"
+                      class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-200 transition-colors duration-300">
+              {{ item.name }}
+            </NuxtLink>
+          </template>
           <hr class="border-gray-300 my-2">
           <div class="flex justify-center space-x-6 pt-2">
-            <a v-for="link in socialLinks" :key="link.name" :href="link.href" :target="link.name === 'CV' ? '_self' : '_blank'" rel="noopener noreferrer"
+            <NuxtLink v-for="link in socialLinks" :key="link.name" :to="link.href" :target="link.name === 'CV' ? '_self' : '_blank'" rel="noopener noreferrer"
                :aria-label="link.name"
                class="text-gray-600 hover:text-cyan-500 transition-colors duration-300">
               <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                    xmlns="http://www.w3.org/2000/svg"
                    v-html="link.icon"></svg>
-            </a>
+            </NuxtLink>
           </div>
         </div>
       </div>
