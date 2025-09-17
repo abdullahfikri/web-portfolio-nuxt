@@ -1,75 +1,78 @@
-# Nuxt Minimal Starter
+# Portfolio Website
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is a personal portfolio website built with [Nuxt.js](https://nuxt.com/), a powerful framework for creating modern web applications with [Vue.js](https://vuejs.org/). The project uses [Nuxt Content](https://content.nuxt.com/) for content management, allowing you to write articles and project descriptions in Markdown. Styling is handled by [Tailwind CSS](https://tailwindcss.com/).
 
-## Setup
+## Features
 
-Make sure to install dependencies:
+*   **Nuxt.js v4**: The latest version of Nuxt.js, offering a great developer experience and powerful features.
+*   **Vue.js v3**: The latest version of the progressive JavaScript framework.
+*   **Nuxt Content v3**: Fetches and displays content from Markdown files, making it easy to manage your portfolio.
+*   **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+*   **Markdown Support**: Write your content in Markdown with syntax highlighting for code blocks.
+*   **Responsive Design**: The layout is designed to work on all screen sizes.
+
+## Project Structure
+
+*   `content/`: Contains your portfolio content in Markdown files.
+*   `pages/`: Defines the routes and views of your application.
+*   `components/`: Contains reusable Vue components.
+*   `assets/`: Stores static assets like CSS, images, and fonts.
+*   `public/`: For files that need to be publicly accessible at the root of your site.
+
+## Getting Started
+
+### Prerequisites
+
+*   [Node.js](https://nodejs.org/) (v18 or higher)
+*   [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+### Installation
+
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/your-username/your-repo-name.git
+    cd your-repo-name
+    ```
+2.  Install the dependencies:
+    ```bash
+    npm install
+    ```
+
+### Development
+
+To run the project in development mode with hot-reloading, run the following command:
 
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+The application will be available at `http://localhost:3000`.
 
-Build the application for production:
+### Build
+
+To build the application for production, run:
 
 ```bash
-# npm
 npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
-Locally preview production build:
+This will create a `.output` directory with the production-ready application.
+
+### Static Site Generation
+
+To generate a static version of the site, run:
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+npm run generate
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+This will create a `dist/` directory that can be deployed to any static hosting service.
+
+## Configuration
+
+*   `nuxt.config.ts`: The main configuration file for Nuxt.js. Here you can configure modules, plugins, and other settings.
+*   `tailwind.config.js`: The configuration file for Tailwind CSS. You can customize your design system here.
+
+## Content Management
+
+To add or modify content, you can create or edit Markdown files in the `content/` directory. Nuxt Content will automatically fetch and render the content on your pages.
