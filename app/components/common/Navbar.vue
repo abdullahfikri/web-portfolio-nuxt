@@ -8,6 +8,7 @@ const menuItems = ref([
   { name: 'Stack', href: '/#stack' },
   { name: 'Project', href: '/#project' },
   { name: 'Contact', href: '/#contact' },
+  { name: 'Blog', href: '/blog'},
   { name: 'CV', href: '/Muhammad-Fikri-CV-Backend-Engineering.pdf' },
 ])
 
